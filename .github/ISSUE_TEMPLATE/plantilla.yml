@@ -80,6 +80,7 @@ body:
       options:
         - label: test
         - label: bug
+        - label: colaborative
         - label: CI/CD
         - label: documentation
         - label: WI_Easy
