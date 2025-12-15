@@ -21,10 +21,12 @@ body:
       required: true
 
   ---
-  ## 📋 2. Detail (Optional)
+# 2. Optional Detail Section
   - type: markdown
     attributes:
       value: |
+        ---
+        ## 📋 Detail (Optional)
         Provide any extra context, steps to reproduce (for bugs), or detailed specifications (for features).
 
   - type: textarea
