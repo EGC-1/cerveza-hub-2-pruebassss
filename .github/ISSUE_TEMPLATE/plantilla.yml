@@ -20,7 +20,6 @@ body:
     validations:
       required: true
 
-  ---
 # 2. Optional Detail Section
   - type: markdown
     attributes:
