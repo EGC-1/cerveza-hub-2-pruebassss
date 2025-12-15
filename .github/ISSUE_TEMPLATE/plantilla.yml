@@ -58,91 +58,64 @@ body:
 
   ## 🏷️ 4. Core Task Type (Asigna Etiquetas)
   - type: dropdown
-    id: type
+    id: Type
     attributes:
       label: Core Task Type
       description: Select the core nature of this issue (mandatory, single selection).
       options:
-        - label: Feature Request
-          value: feature
+        - label: Feature
+          value: Feature
           labels: 
-            - enhancement
-        - label: Bug Report
-          value: bug
+            - Feature
+        - label: Bug
+          value: Bug
           labels: 
-            - bug
-        - label: Maintenance Task
-          value: task
+            - Bug
+        - label: Task
+          value: Task
           labels:
-            - chore
+            - Task
     validations:
       required: true
   
-  # 5. Additional Labels (Asigna Etiquetas Múltiples)
-  - type: dropdown
-    id: additional_labels
-    attributes:
-      label: Additional Labels
-      description: Select all relevant labels that describe this issue.
-      options:
-        - label: test
-          value: test
-          labels:
-            - test
-        - label: bug
-          value: bug
-          labels:
-            - bug
-        - label: colaborative
-          value: colaborative
-          labels:
-            - colaborative
-        - label: CI/CD
-          value: ci_cd
-          labels:
-            - CI/CD
-        - label: documentation
-          value: documentation
-          labels:
-            - documentation
-        - label: WI_Easy
-          value: WI_Easy
-          labels:
-            - WI_Easy
-        - label: WI_High
-          value: WI_High
-          labels:
-            - WI_High
-        - label: WI_Mandatory
-          value: WI_Mandatory
-          labels:
-            - WI_Mandatory
-        - label: WI_Medium
-          value: WI_Medium
-          labels:
-            - WI_Medium
-    validations:
-      required: true
+  # 5. Additional Labels (Lista de selección múltiple, NO aplica etiquetas)
+- type: checkboxes
+  id: additional_labels_select
+  attributes:
+    label: Etiquetas Adicionales (Selección Múltiple)
+    description: Selecciona todas las etiquetas que apliquen. **Estas no se adjuntarán automáticamente a la Issue.**
+    options:
+      - label: test
+      - label: bug
+      - label: colaborative
+      - label: CI/CD
+      - label: documentation
+      - label: WI_Easy
+      - label: WI_High
+      - label: WI_Mandatory
+      - label: WI_Medium
+  validations:
+    required: false
       
   # 6. Priority (Asigna Etiquetas de Prioridad)
   - type: dropdown
-    id: priority
+    id: Priority
     attributes:
       label: Priority
       description: How critical is this issue? (mandatory priority label)
       options:
-        - label: P0 Critical
+        - label: P0 High
+          value: P0
           labels:
-            - P0-Critical
-        - label: P1 High
+            - P0
+        - label: P1 Medium
+          value: P1
           labels:
-            - P1-High
-        - label: P2 Medium
+            - P1
+        - label: P2 Low
+          value: P2
           labels:
-            - P2-Medium
-        - label: P3 Low
-          labels:
-            - P3-Low
+            - P2
     validations:
       required: true
 
