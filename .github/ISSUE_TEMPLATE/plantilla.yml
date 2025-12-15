@@ -82,39 +82,39 @@ body:
     validations:
       required: true
       
-  # 5. Additional Labels (¡Etiquetas Aplicadas!)
+ # 5. Additional Labels (¡Etiquetas Aplicadas!)
   - type: checkboxes
     id: additional_labels
     attributes:
       label: Additional Labels
       description: Select all relevant labels that describe this issue.
       options:
-        - label: Tests
-          labels: 
+        - label: test
+          labels:
             - test
-        - label: Bug Fix
-          labels: 
+        - label: bug
+          labels:
             - bug
-        - label: Collaboration Required
-          labels: 
+        - label: colaborative
+          labels:
             - colaborative
-        - label: CI/CD Pipeline
-          labels: 
+        - label: CI/CD
+          labels:
             - CI/CD
-        - label: Documentation Update
-          labels: 
+        - label: documentation
+          labels:
             - documentation
-        - label: Work Item: Easy
-          labels: 
+        - label: WI_Easy
+          labels:
             - WI_Easy
-        - label: Work Item: High
-          labels: 
+        - label: WI_High
+          labels:
             - WI_High
-        - label: Work Item: Mandatory
-          labels: 
+        - label: WI_Mandatory
+          labels:
             - WI_Mandatory
-        - label: Work Item: Medium
-          labels: 
+        - label: WI_Medium
+          labels:
             - WI_Medium
     validations:
       required: false
@@ -146,7 +146,7 @@ body:
       required: true
       
   # 7. Asignación de Responsables (NUEVO CAMPO)
-  - type: input
+  - type: input # Usamos input para el campo de texto
     id: assignees_input
     attributes:
       label: Assignee(s)
@@ -155,7 +155,7 @@ body:
     validations:
       required: false
 
-  # 8. Confirmation Checkbox List (Sin cambios)
+  # 8. Confirmation Checkbox List
   - type: checkboxes
     id: terms
     attributes:
