@@ -54,7 +54,7 @@ body:
     validations:
       required: false
 
-  ---
+  
   ## 🏷️ 4. Core Task Type (Asigna Etiquetas)
   - type: dropdown
     id: type
@@ -140,7 +140,7 @@ body:
     validations:
       required: true
       
-  ---
+  
   ## 👤 7. Assignee(s) (Campo de Texto para Asignación)
   - type: input
     id: assignees_input
