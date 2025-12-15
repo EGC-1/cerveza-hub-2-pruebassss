@@ -1,11 +1,11 @@
 name: Feature Request or Bug Report
 description: Suggest an enhancement or report an issue that needs fixing.
 title: "[TYPE]: Concise Title Describing the Issue"
-labels: ["triage"]
+labels: ["triage"] # Etiqueta base aplicada a todas las issues
 assignees: []
 
 body:
-  # 1. Mandatory Description Section
+  # 1. Mandatory Description Section (Sin cambios)
   - type: markdown
     attributes:
       value: |
@@ -21,7 +21,7 @@ body:
     validations:
       required: true
 
-  # 2. Optional Detail Section
+  # 2. Optional Detail Section (Sin cambios)
   - type: markdown
     attributes:
       value: |
@@ -38,7 +38,7 @@ body:
     validations:
       required: false
 
-  # 3. Planning Status
+  # 3. Planning Status (Sin cambios)
   - type: markdown
     attributes:
       value: |
@@ -53,56 +53,109 @@ body:
       options:
         - label: This is **UNPLANNED** work (e.g., an urgent fix or reactive task).
           required: false
+          # IMPORTANTE: No podemos asignar etiquetas aquí porque no hay un valor único al que asociarlas
     validations:
       required: false
 
-  # 4. Core Task Type
+  # 4. Core Task Type (¡Nuevas Etiquetas Aplicadas!)
   - type: dropdown
     id: type
     attributes:
       label: Core Task Type
       description: Select the core nature of this issue (mandatory, single selection).
       options:
-        - feature
-        - bug
-        - task
+        - label: Feature Request
+          value: feature
+          # Asigna la etiqueta 'enhancement' o similar
+          labels: 
+            - enhancement
+        - label: Bug Report
+          value: bug
+          # Asigna la etiqueta 'bug'
+          labels: 
+            - bug
+        - label: Maintenance Task
+          value: task
+          # Asigna la etiqueta 'chore' o similar
+          labels:
+            - chore
     validations:
       required: true
       
-  # 5. Additional Labels
+  # 5. Additional Labels (¡Etiquetas Aplicadas!)
   - type: checkboxes
     id: additional_labels
     attributes:
       label: Additional Labels
       description: Select all relevant labels that describe this issue.
       options:
-        - label: test
-        - label: bug
-        - label: colaborative
-        - label: CI/CD
-        - label: documentation
-        - label: WI_Easy
-        - label: WI_High
-        - label: WI_Mandatory
-        - label: WI_Medium
+        - label: Tests
+          labels: 
+            - test
+        - label: Bug Fix
+          labels: 
+            - bug
+        - label: Collaboration Required
+          labels: 
+            - colaborative
+        - label: CI/CD Pipeline
+          labels: 
+            - CI/CD
+        - label: Documentation Update
+          labels: 
+            - documentation
+        - label: Work Item: Easy
+          labels: 
+            - WI_Easy
+        - label: Work Item: High
+          labels: 
+            - WI_High
+        - label: Work Item: Mandatory
+          labels: 
+            - WI_Mandatory
+        - label: Work Item: Medium
+          labels: 
+            - WI_Medium
     validations:
       required: false
       
-  # 6. Priority
+  # 6. Priority (¡Etiquetas Aplicadas!)
   - type: dropdown
     id: priority
     attributes:
       label: Priority
       description: How critical is this issue? (mandatory priority label)
       options:
-        - P0: Critical
-        - P1: High
-        - P2: Medium
-        - P3: Low
+        - label: P0: Critical
+          value: P0
+          labels:
+            - P0-Critical
+        - label: P1: High
+          value: P1
+          labels:
+            - P1-High
+        - label: P2: Medium
+          value: P2
+          labels:
+            - P2-Medium
+        - label: P3: Low
+          value: P3
+          labels:
+            - P3-Low
     validations:
       required: true
+      
+  # 7. Asignación de Responsables (NUEVO CAMPO)
+  - type: input
+    id: assignees_input
+    attributes:
+      label: Assignee(s)
+      description: Escribe el @username de GitHub de la(s) persona(s) responsable(s) de esta Issue.
+      placeholder: E.g., @usuario1 @usuario2
+    validations:
+      required: false
 
-  # 7. Confirmation Checkbox List
+  # 8. Confirmation Checkbox List (Sin cambios)
   - type: checkboxes
     id: terms
     attributes:
