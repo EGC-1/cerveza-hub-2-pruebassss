@@ -36,7 +36,6 @@ body:
       placeholder: E.g., 1. Go to 'X' page. 2. Click on 'Y' button. 3. Observe Z error...
     validations:
       required: false
-
   
   ## 📅 3. Planning Status
   - type: markdown
@@ -53,7 +52,6 @@ body:
           required: false
     validations:
       required: false
-
   
   ## 🏷️ 4. Core Task Type (Asigna Etiquetas)
   - type: dropdown
@@ -76,8 +74,8 @@ body:
             - chore
     validations:
       required: true
-      
-  # 5. Additional Labels (Asigna Etiquetas Múltiples)
+  
+# 5. Additional Labels (Asigna Etiquetas Múltiples)
   - type: checkboxes
     id: additional_labels
     attributes:
@@ -113,28 +111,26 @@ body:
             - WI_Medium
     validations:
       required: false
-      
+  
 # 6. Priority (Asigna Etiquetas de Prioridad)
- - type: dropdown
-   id: priority
-   attributes:
-     label: Priority
-     description: How critical is this issue? (mandatory priority label)
-     options:
-       - label: P0: Critical
-         labels:
-           - P0-Critical
-       - label: P1: High
-         labels:
-           - P1-High
-       - label: P2: Medium
-         labels:
-           - P2-Medium
-       - label: P3: Low
-         labels:
-           - P3-Low # <--- ENSURE THIS HAS EXACTLY 13 LEADING SPACES IF 'options' HAS 7
-   validations:
-     required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this issue? (mandatory priority label)
+      options:
+        - label: P0: Critical
+          labels:
+            - P0-Critical
+        - label: P1: High
+          labels:
+            - P1-High
+        - label: P2: Medium
+          labels:
+            - P2-Medium
+        - label: P3: Low
+          labels:
+            - P3-Low
     validations:
       required: true
   
