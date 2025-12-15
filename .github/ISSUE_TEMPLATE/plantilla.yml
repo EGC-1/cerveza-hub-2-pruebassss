@@ -5,11 +5,10 @@ labels: ["triage"]
 assignees: []
 
 body:
-  # 1. Mandatory Description Section
+  ## 📝 1. Description (Mandatory)
   - type: markdown
     attributes:
       value: |
-        ## 📝 Description (Mandatory)
         Please provide a clear and concise description of the request or the problem you are encountering.
 
   - type: textarea
@@ -21,12 +20,11 @@ body:
     validations:
       required: true
 
-  # 2. Optional Detail Section
+  ---
+  ## 📋 2. Detail (Optional)
   - type: markdown
     attributes:
       value: |
-        ---
-        ## 📋 Detail (Optional)
         Provide any extra context, steps to reproduce (for bugs), or detailed specifications (for features).
 
   - type: textarea
@@ -38,12 +36,11 @@ body:
     validations:
       required: false
 
-  # 3. Planning Status
+  ---
+  ## 📅 3. Planning Status
   - type: markdown
     attributes:
       value: |
-        ---
-        ## 📅 Planning Status
         Is this a planned task (e.g., from a sprint backlog) or reactive work (e.g., immediate bug fix)?
   
   - type: checkboxes
@@ -56,7 +53,8 @@ body:
     validations:
       required: false
 
-  # 4. Core Task Type (Etiquetas Aplicadas)
+  ---
+  ## 🏷️ 4. Core Task Type (Asigna Etiquetas)
   - type: dropdown
     id: type
     attributes:
@@ -78,7 +76,7 @@ body:
     validations:
       required: true
       
-  # 5. Additional Labels (Etiquetas Aplicadas)
+  # 5. Additional Labels (Asigna Etiquetas Múltiples)
   - type: checkboxes
     id: additional_labels
     attributes:
@@ -115,7 +113,7 @@ body:
     validations:
       required: false
       
-  # 6. Priority (Etiquetas Aplicadas)
+  # 6. Priority (Asigna Etiquetas de Prioridad)
   - type: dropdown
     id: priority
     attributes:
@@ -141,7 +139,8 @@ body:
     validations:
       required: true
       
-  # 7. Asignación de Responsables (NUEVO CAMPO)
+  ---
+  ## 👤 7. Assignee(s) (Campo de Texto para Asignación)
   - type: input
     id: assignees_input
     attributes:
