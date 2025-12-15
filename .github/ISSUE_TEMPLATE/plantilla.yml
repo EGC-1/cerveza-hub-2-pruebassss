@@ -37,7 +37,7 @@ body:
     validations:
       required: false
 
-  ---
+  
   ## 📅 3. Planning Status
   - type: markdown
     attributes:
