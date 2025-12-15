@@ -79,23 +79,23 @@ body:
       required: true
   
   # 5. Additional Labels (Lista de selección múltiple, NO aplica etiquetas)
-- type: checkboxes
-  id: additional_labels_select
-  attributes:
-    label: Etiquetas Adicionales (Selección Múltiple)
-    description: Selecciona todas las etiquetas que apliquen. **Estas no se adjuntarán automáticamente a la Issue.**
-    options:
-      - label: test
-      - label: bug
-      - label: colaborative
-      - label: CI/CD
-      - label: documentation
-      - label: WI_Easy
-      - label: WI_High
-      - label: WI_Mandatory
-      - label: WI_Medium
-  validations:
-    required: false
+  - type: checkboxes
+    id: additional_labels_select
+    attributes:
+      label: Etiquetas Adicionales (Selección Múltiple)
+      description: Selecciona todas las etiquetas que apliquen. **Estas no se adjuntarán automáticamente a la Issue.**
+      options:
+        - label: test
+        - label: bug
+        - label: colaborative
+        - label: CI/CD
+        - label: documentation
+        - label: WI_Easy
+        - label: WI_High
+        - label: WI_Mandatory
+        - label: WI_Medium
+    validations:
+      required: true
       
   # 6. Priority (Asigna Etiquetas de Prioridad)
   - type: dropdown
