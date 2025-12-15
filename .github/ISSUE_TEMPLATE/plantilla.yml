@@ -83,7 +83,7 @@ body:
     id: additional_labels_select
     attributes:
       label: Etiquetas Adicionales (Selección Múltiple)
-      description: Selecciona todas las etiquetas que apliquen. **Estas no se adjuntarán automáticamente a la Issue.**
+      description: Selecciona todas las etiquetas que apliquen. Estas aparecerán en el cuerpo del Issue.
       options:
         - label: test
         - label: bug
@@ -95,8 +95,8 @@ body:
         - label: WI_Mandatory
         - label: WI_Medium
     validations:
-      required: true
-      
+      required: false # <--- ¡CORREGIDO! No es obligatorio seleccionar un checkbox.
+  
   # 6. Priority (Asigna Etiquetas de Prioridad)
   - type: dropdown
     id: Priority
@@ -107,15 +107,15 @@ body:
         - label: P0 High
           value: P0
           labels:
-            - P0
+            - P0 # <--- Asigna la etiqueta 'P0'
         - label: P1 Medium
           value: P1
           labels:
-            - P1
+            - P1 # <--- Asigna la etiqueta 'P1'
         - label: P2 Low
           value: P2
           labels:
-            - P2
+            - P2 # <--- Asigna la etiqueta 'P2'
     validations:
       required: true
 
