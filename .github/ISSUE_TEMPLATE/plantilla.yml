@@ -1,11 +1,11 @@
 name: Feature Request or Bug Report
 description: Suggest an enhancement or report an issue that needs fixing.
 title: "[TYPE]: Concise Title Describing the Issue"
-labels: ["triage"] # Etiqueta base aplicada a todas las issues
+labels: ["triage"]
 assignees: []
 
 body:
-  # 1. Mandatory Description Section (Sin cambios)
+  # 1. Mandatory Description Section
   - type: markdown
     attributes:
       value: |
@@ -21,7 +21,7 @@ body:
     validations:
       required: true
 
-  # 2. Optional Detail Section (Sin cambios)
+  # 2. Optional Detail Section
   - type: markdown
     attributes:
       value: |
@@ -38,7 +38,7 @@ body:
     validations:
       required: false
 
-  # 3. Planning Status (Sin cambios)
+  # 3. Planning Status
   - type: markdown
     attributes:
       value: |
@@ -53,11 +53,10 @@ body:
       options:
         - label: This is **UNPLANNED** work (e.g., an urgent fix or reactive task).
           required: false
-          # IMPORTANTE: No podemos asignar etiquetas aquí porque no hay un valor único al que asociarlas
     validations:
       required: false
 
-  # 4. Core Task Type (¡Nuevas Etiquetas Aplicadas!)
+  # 4. Core Task Type (Etiquetas Aplicadas)
   - type: dropdown
     id: type
     attributes:
@@ -66,23 +65,20 @@ body:
       options:
         - label: Feature Request
           value: feature
-          # Asigna la etiqueta 'enhancement' o similar
           labels: 
             - enhancement
         - label: Bug Report
           value: bug
-          # Asigna la etiqueta 'bug'
           labels: 
             - bug
         - label: Maintenance Task
           value: task
-          # Asigna la etiqueta 'chore' o similar
           labels:
             - chore
     validations:
       required: true
       
- # 5. Additional Labels (¡Etiquetas Aplicadas!)
+  # 5. Additional Labels (Etiquetas Aplicadas)
   - type: checkboxes
     id: additional_labels
     attributes:
@@ -119,7 +115,7 @@ body:
     validations:
       required: false
       
-  # 6. Priority (¡Etiquetas Aplicadas!)
+  # 6. Priority (Etiquetas Aplicadas)
   - type: dropdown
     id: priority
     attributes:
@@ -146,7 +142,7 @@ body:
       required: true
       
   # 7. Asignación de Responsables (NUEVO CAMPO)
-  - type: input # Usamos input para el campo de texto
+  - type: input
     id: assignees_input
     attributes:
       label: Assignee(s)
