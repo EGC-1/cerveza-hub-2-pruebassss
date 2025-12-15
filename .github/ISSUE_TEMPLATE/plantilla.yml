@@ -56,55 +56,73 @@ body:
     validations:
       required: false
 
-  # 4. Core Task Type
+  ## 🏷️ 4. Core Task Type (Asigna Etiquetas)
   - type: dropdown
     id: type
     attributes:
       label: Core Task Type
       description: Select the core nature of this issue (mandatory, single selection).
       options:
-        - feature
-        - bug
-        - task
+        - label: Feature Request
+          value: feature
+          labels: 
+            - enhancement
+        - label: Bug Report
+          value: bug
+          labels: 
+            - bug
+        - label: Maintenance Task
+          value: task
+          labels:
+            - chore
     validations:
       required: true
-      
+  
   # 5. Additional Labels (Asigna Etiquetas Múltiples)
-  - type: checkboxes
+  - type: dropdown
     id: additional_labels
     attributes:
       label: Additional Labels
       description: Select all relevant labels that describe this issue.
       options:
         - label: test
+          value: test
           labels:
             - test
         - label: bug
+          value: bug
           labels:
             - bug
         - label: colaborative
+          value: colaborative
           labels:
             - colaborative
         - label: CI/CD
+          value: ci_cd
           labels:
             - CI/CD
         - label: documentation
+          value: documentation
           labels:
             - documentation
         - label: WI_Easy
+          value: WI_Easy
           labels:
             - WI_Easy
         - label: WI_High
+          value: WI_High
           labels:
             - WI_High
         - label: WI_Mandatory
+          value: WI_Mandatory
           labels:
             - WI_Mandatory
         - label: WI_Medium
+          value: WI_Medium
           labels:
             - WI_Medium
     validations:
-      required: false
+      required: true
       
   # 6. Priority (Asigna Etiquetas de Prioridad)
   - type: dropdown
