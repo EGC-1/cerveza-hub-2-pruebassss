@@ -113,25 +113,28 @@ body:
             - WI_Medium
     validations:
       required: false
-  # 6. Priority (Asigna Etiquetas de Prioridad)
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      description: How critical is this issue? (mandatory priority label)
-      options:
-        - label: P0: Critical
-          labels: 
-            - P0-Critical
-        - label: P1: High
-          labels: 
-            - P1-High
-        - label: P2: Medium
-          labels: 
-            - P2-Medium
-        - label: P3: Low
-          labels: 
-            - P3-Low
+      
+# 6. Priority (Asigna Etiquetas de Prioridad)
+ - type: dropdown
+   id: priority
+   attributes:
+     label: Priority
+     description: How critical is this issue? (mandatory priority label)
+     options:
+       - label: P0: Critical
+         labels:
+           - P0-Critical
+       - label: P1: High
+         labels:
+           - P1-High
+       - label: P2: Medium
+         labels:
+           - P2-Medium
+       - label: P3: Low
+         labels:
+           - P3-Low # <--- ENSURE THIS HAS EXACTLY 13 LEADING SPACES IF 'options' HAS 7
+   validations:
+     required: true
     validations:
       required: true
   
