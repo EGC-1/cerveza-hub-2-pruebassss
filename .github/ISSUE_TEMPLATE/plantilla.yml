@@ -5,10 +5,11 @@ labels: ["triage"]
 assignees: []
 
 body:
-  ## 📝 1. Description (Mandatory)
+  # 1. Mandatory Description Section
   - type: markdown
     attributes:
       value: |
+        ## 📝 Description (Mandatory)
         Please provide a clear and concise description of the request or the problem you are encountering.
 
   - type: textarea
@@ -20,7 +21,7 @@ body:
     validations:
       required: true
 
-# 2. Optional Detail Section
+  # 2. Optional Detail Section
   - type: markdown
     attributes:
       value: |
@@ -36,11 +37,13 @@ body:
       placeholder: E.g., 1. Go to 'X' page. 2. Click on 'Y' button. 3. Observe Z error...
     validations:
       required: false
-  
-  ## 📅 3. Planning Status
+
+  # 3. Planning Status
   - type: markdown
     attributes:
       value: |
+        ---
+        ## 📅 Planning Status
         Is this a planned task (e.g., from a sprint backlog) or reactive work (e.g., immediate bug fix)?
   
   - type: checkboxes
@@ -52,30 +55,21 @@ body:
           required: false
     validations:
       required: false
-  
-  ## 🏷️ 4. Core Task Type (Asigna Etiquetas)
+
+  # 4. Core Task Type
   - type: dropdown
     id: type
     attributes:
       label: Core Task Type
       description: Select the core nature of this issue (mandatory, single selection).
       options:
-        - label: Feature Request
-          value: feature
-          labels: 
-            - enhancement
-        - label: Bug Report
-          value: bug
-          labels: 
-            - bug
-        - label: Maintenance Task
-          value: task
-          labels:
-            - chore
+        - feature
+        - bug
+        - task
     validations:
       required: true
-  
-# 5. Additional Labels (Asigna Etiquetas Múltiples)
+      
+  # 5. Additional Labels (Asigna Etiquetas Múltiples)
   - type: checkboxes
     id: additional_labels
     attributes:
@@ -111,8 +105,8 @@ body:
             - WI_Medium
     validations:
       required: false
-  
-# 6. Priority (Asigna Etiquetas de Prioridad)
+      
+  # 6. Priority (Asigna Etiquetas de Prioridad)
   - type: dropdown
     id: priority
     attributes:
@@ -133,7 +127,7 @@ body:
             - P3-Low
     validations:
       required: true
-  
+
   ## 👤 7. Assignee(s) (Campo de Texto para Asignación)
   - type: input
     id: assignees_input
