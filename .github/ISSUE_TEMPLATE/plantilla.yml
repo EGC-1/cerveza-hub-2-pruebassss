@@ -144,7 +144,7 @@ body:
     validations:
       required: false
 
-  # 8. Confirmation Checkbox List
+  # 8. Confirmation Checkbox List (CORREGIDO - sin clave 'labels')
   - type: checkboxes
     id: terms
     attributes:
