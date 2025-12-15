@@ -113,32 +113,31 @@ body:
             - WI_Medium
     validations:
       required: false
-      # 6. Priority (Asigna Etiquetas de Prioridad)
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      description: How critical is this issue? (mandatory priority label)
-      options:
-        - label: P0: Critical
-          value: P0
-          labels:
-            - P0-Critical
-        - label: P1: High
-          value: P1
-          labels:
-            - P1-High
-        - label: P2: Medium
-          value: P2
-          labels:
-            - P2-Medium
-        - label: P3: Low
-          value: P3
-          labels:
-            - P3-Low
-    validations:
-      required: true
-      
+  # 6. Priority (Asigna Etiquetas de Prioridad)
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this issue? (mandatory priority label)
+      options:
+        - label: P0: Critical
+          value: P0
+          labels: 
+            - P0-Critical
+        - label: P1: High
+          value: P1
+          labels: 
+            - P1-High
+        - label: P2: Medium
+          value: P2
+          labels: 
+            - P2-Medium
+        - label: P3: Low
+          value: P3
+          labels: 
+            - P3-Low
+    validations:
+      required: true
   
   ## 👤 7. Assignee(s) (Campo de Texto para Asignación)
   - type: input
