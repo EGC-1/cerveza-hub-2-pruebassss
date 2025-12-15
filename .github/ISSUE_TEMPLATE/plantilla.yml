@@ -95,10 +95,10 @@ body:
       label: Priority
       description: How critical is this issue? (mandatory priority label)
       options:
-        - P0 Critical
-        - P1 High
-        - P2 Medium
-        - P3 Low
+        - P0: Critical
+        - P1: High
+        - P2: Medium
+        - P3: Low
     validations:
       required: true
 
